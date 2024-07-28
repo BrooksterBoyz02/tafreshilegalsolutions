@@ -24,7 +24,7 @@ header {
 }
 
 .logo {
-    height: 50px;
+    height: 40px; /* Reduced height */
 }
 
 .menu-toggle {
@@ -76,9 +76,11 @@ nav ul li a {
 }
 
 .carousel-image {
-    width: 100%;
+    width: 70%; /* Adjust width */
+    max-width: 300px; /* Set max width */
     display: none;
     transition: opacity 1s ease-in-out;
+    margin: 0 auto; /* Center images */
 }
 
 .carousel-image.active {
@@ -124,5 +126,10 @@ footer {
 
     nav ul li {
         margin: 10px 0;
+    }
+
+    .carousel-image {
+        width: 100%;
+        max-width: none;
     }
 }
