@@ -1,20 +1,38 @@
-/* Add mobile menu styles */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
+/* Basic reset and modern font */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Overall layout */
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar styles */
+header {
+    background: #333;
     color: #fff;
-    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo {
+    height: 50px;
+    vertical-align: middle;
 }
 
 nav {
     display: flex;
-}
-
-nav.active {
-    display: block;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
+    list-style: none;
     display: flex;
 }
 
@@ -22,7 +40,26 @@ nav ul li {
     margin-left: 20px;
 }
 
-/* Style for mobile menu */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f39c12; /* Accent color for hover effect */
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile menu styles */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -31,6 +68,12 @@ nav ul li {
     nav ul {
         display: none;
         flex-direction: column;
+        background: #333;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on the height of the header */
+        left: 0;
+        padding: 20px 0;
     }
 
     nav.active ul {
@@ -40,6 +83,13 @@ nav ul li {
     nav ul li {
         margin-left: 0;
         margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+        font-size: 18px;
+        display: block;
+        color: #fff;
     }
 }
 
@@ -53,10 +103,12 @@ html {
     position: relative;
     overflow: hidden;
     width: 100%;
+    height: 400px; /* Adjust based on the desired height */
 }
 
 .carousel img {
     width: 100%;
+    height: auto;
     position: absolute;
     transition: opacity 1s ease-in-out;
     opacity: 0;
