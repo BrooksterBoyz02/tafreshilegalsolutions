@@ -9,7 +9,6 @@
 <body>
     <header>
         <div class="container">
-            <img src="images/logo.png" alt="Tafreshi Legal Solutions Logo" class="logo">
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -22,31 +21,35 @@
     </header>
     <main>
         <section class="contact">
-            <h1>Get in Touch!</h1>
-            <p>Hey there! Got questions, need some advice, or just want to chat? You’re in the right place! Here’s how you can get in touch with us:</p>
+            <div class="container">
+                <h1>Get in Touch!</h1>
+                <p>Hey there! Got questions, need some advice, or just want to chat? You’re in the right place! Here’s how you can get in touch with us:</p>
 
-            <div class="contact-info">
-                <p><strong>Address:</strong> 906 Applerock, Leander TX, 78641</p>
-                <p><strong>Phone:</strong> (432) 978-0903</p>
-                <p><strong>Email:</strong> <a href="mailto:contact@tafreshilegal.com">contact@tafreshilegal.com</a></p>
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 906 Applerock, Leander TX, 78641</p>
+                    <p><strong>Phone:</strong> (432) 978-0903</p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@tafreshilegal.com">contact@tafreshilegal.com</a></p>
+                </div>
+
+                <form action="contact_form_handler.php" method="post" class="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+                    <button type="submit">Send It!</button>
+                </form>
             </div>
-
-            <form action="contact_form_handler.php" method="post" class="contact-form">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" placeholder="John Doe" required>
-
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@domain.com" required>
-
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" rows="4" placeholder="Type your message here..." required></textarea>
-
-                <button type="submit">Send It!</button>
-            </form>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Tafreshi Legal Solutions. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+        <div class="container">
+            <p>&copy; 2024 Tafreshi Legal Solutions. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
