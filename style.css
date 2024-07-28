@@ -1,119 +1,128 @@
-/* Basic reset and modern font */
-* {
-    box-sizing: border-box;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Overall layout */
-body {
     line-height: 1.6;
     color: #333;
 }
 
-/* Navbar styles */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 header {
     background: #333;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 0;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
     height: 50px;
-    vertical-align: middle;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    padding: 10px;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #f39c12; /* Accent color for hover effect */
 }
 
 .menu-toggle {
     display: none;
-    font-size: 30px;
-    color: #fff;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
-/* Mobile menu styles */
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.about, .team {
+    padding: 20px;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    display: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.team-member-info {
+    text-align: center;
+}
+
+.member-details.hidden {
+    display: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
     .menu-toggle {
         display: block;
     }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: #333;
-        width: 100%;
-        position: absolute;
-        top: 60px; /* Adjust based on the height of the header */
-        left: 0;
-        padding: 20px 0;
-    }
-
-    nav.active ul {
+    nav.active {
         display: flex;
     }
 
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
     nav ul li {
-        margin-left: 0;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
-
-    nav ul li a {
-        padding: 15px 20px;
-        font-size: 18px;
-        display: block;
-        color: #fff;
-    }
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Image carousel styles */
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 400px; /* Adjust based on the desired height */
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
-}
-
-.carousel img.active {
-    opacity: 1;
 }
