@@ -1,33 +1,36 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #444;
+    background-color: #f9f9f9;
 }
 
 a {
     text-decoration: none;
     color: #007BFF;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
+    color: #0056b3;
     text-decoration: underline;
 }
 
 /* Header Styles */
 header {
-    background: #333;
+    background: #222;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .container {
@@ -41,8 +44,13 @@ header {
 
 .menu-toggle {
     display: none;
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #007BFF;
 }
 
 nav ul {
@@ -66,54 +74,57 @@ nav ul li a {
 .hero {
     background: #007BFF;
     color: #fff;
-    padding: 100px 20px 60px;
+    padding: 120px 20px 80px;
     text-align: center;
 }
 
 .hero h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 /* About Section Styles */
 .about {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .about h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .about p {
-    font-size: 18px;
+    font-size: 1.125rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
 /* Team Section Styles */
 .team {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .team h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 .carousel-image {
@@ -142,17 +153,18 @@ main {
 }
 
 .services {
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .services h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 700;
 }
 
 .services p {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -164,7 +176,7 @@ main {
 }
 
 .services ul li {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 15px;
 }
 
@@ -175,58 +187,61 @@ main {
 
 /* Hiring Page Styles */
 .hiring {
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .hiring h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 700;
 }
 
 .hiring p {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .hiring h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 10px;
     text-align: center;
+    font-weight: 700;
 }
 
 .hiring ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .hiring ul li {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin-bottom: 10px;
 }
 
 /* Contact Page Styles */
 .contact {
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .contact h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 700;
 }
 
 .contact p {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
     margin-bottom: 20px;
 }
 
 .contact-info {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -236,37 +251,39 @@ main {
 }
 
 .contact-form {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
     padding: 20px;
     background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .contact-form label {
     display: block;
     margin-bottom: 8px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 6px;
+    font-size: 1rem;
 }
 
 .contact-form button {
     background: #007BFF;
     color: #fff;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 4px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
@@ -275,13 +292,14 @@ main {
 
 /* FAQs Page Styles */
 .faqs {
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
 .faqs h2 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: 700;
 }
 
 .faq-item {
@@ -289,24 +307,26 @@ main {
 }
 
 .faq-item h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .faq-item p {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0;
 }
 
 /* Footer Styles */
 footer {
-    background: #333;
+    background: #222;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
     position: relative;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
 }
 
 footer p {
@@ -334,12 +354,16 @@ footer a {
         margin-bottom: 10px;
     }
 
+    .menu-toggle {
+        display: block;
+    }
+
     .hero h1,
     .services h1,
     .hiring h1,
     .contact h1,
     .faqs h2 {
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     .hero p,
@@ -347,7 +371,7 @@ footer a {
     .hiring p,
     .contact p,
     .faqs p {
-        font-size: 16px;
+        font-size: 1rem;
     }
 
     .contact-form,
@@ -355,3 +379,4 @@ footer a {
         padding: 15px;
     }
 }
+
