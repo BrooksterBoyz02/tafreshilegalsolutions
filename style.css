@@ -9,16 +9,6 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Horizontal Text Rotation Helper */
-.horizontal-text {
-    display: inline-block;
-    transform: rotate(-90deg);
-    transform-origin: left bottom;
-    white-space: nowrap;
-    padding: 10px;
-}
-
-/* General Styles */
 a {
     text-decoration: none;
     color: #007BFF;
@@ -98,37 +88,53 @@ nav ul li a {
     font-size: 1.125rem;
 }
 
-/* About Section Styles */
-.about {
-    padding: 80px 20px;
+/* Common Section Styles */
+section {
+    padding: 60px 20px;
     text-align: center;
 }
 
-.about h2 {
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+section h2 {
     font-size: 2rem;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.about p {
+section p {
     font-size: 1.125rem;
-    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+/* Services Page Styles */
+.services ul,
+.hiring ul,
+.faqs ul {
+    list-style: none;
+    padding: 0;
     margin: 0 auto;
+    max-width: 700px;
+}
+
+.services ul li,
+.hiring ul li {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+}
+
+.services ul li strong,
+.hiring ul li strong {
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Team Section Styles */
-.team {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.team h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    font-weight: 700;
-}
-
-.carousel {
+.team .carousel {
     position: relative;
     width: 100%;
     max-width: 700px;
@@ -156,107 +162,8 @@ nav ul li a {
     text-align: left;
 }
 
-/* Services Page Styles */
-main {
-    margin-top: 80px; /* Adjust based on header height */
-    padding: 20px;
-}
-
-.services {
-    padding: 60px 20px;
-}
-
-.services h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.services p {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.services ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.services ul li {
-    font-size: 1.125rem;
-    margin-bottom: 15px;
-}
-
-.services ul li strong {
-    display: block;
-    margin-bottom: 5px;
-}
-
-/* Hiring Page Styles */
-.hiring {
-    padding: 60px 20px;
-}
-
-.hiring h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.hiring p {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.hiring h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.hiring ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 700px;
-}
-
-.hiring ul li {
-    font-size: 1.125rem;
-    margin-bottom: 10px;
-}
-
 /* Contact Page Styles */
-.contact {
-    padding: 60px 20px;
-}
-
-.contact h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 700;
-}
-
-.contact p {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-info {
-    font-size: 1.125rem;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
+.contact .contact-info p {
     margin: 10px 0;
 }
 
@@ -301,17 +208,6 @@ main {
 }
 
 /* FAQs Page Styles */
-.faqs {
-    padding: 60px 20px;
-}
-
-.faqs h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: 700;
-}
-
 .faq-item {
     margin-bottom: 20px;
 }
