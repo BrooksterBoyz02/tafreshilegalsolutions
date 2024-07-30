@@ -3,136 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQs</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        nav {
-            background: #333;
-            color: #fff;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-bottom: 2rem;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: space-around;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-        .faqs {
-            background-color: #fff;
-            padding: 2rem;
-            max-width: 800px;
-            margin: 2rem auto;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .faqs h2 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 1.5rem;
-        }
-        .faq-item {
-            margin-bottom: 1.5rem;
-        }
-        .faq-item h3 {
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
-        .faq-item p {
-            margin: 0;
-            color: #666;
-        }
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-            nav ul {
-                display: none;
-                flex-direction: column;
-            }
-            nav.active ul {
-                display: flex;
-            }
-        }
-    </style>
+    <title>Contact Us - Tafreshi Legal Solutions</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <nav id="navbar">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="hiring.html">Hiring</a></li>
-                <li><a href="FAQ's.html">FAQ's</a></li>
-            </ul>
-        </nav>
-    </div>
-    <section class="faqs">
+    <header>
         <div class="container">
-            <h2>FAQs – Your Questions Answered!</h2>
-            <div class="faq-item">
-                <h3>Need some legal help? What should you do?</h3>
-                <p>Got a legal issue? Just reach out! Fill out our contact form, give us a call, or send us an email. We’ll set up a chat to figure out what’s going on and how we can assist.</p>
-            </div>
-            <div class="faq-item">
-                <h3>How do we keep your info safe?</h3>
-                <p>Your privacy is our top priority. We lock up your info tight and only share it with the necessary folks. Think of it as your personal secret diary—only you and your trusted friends get to see it.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Can you get a free consultation?</h3>
-                <p>Absolutely! We offer a free consultation so we can get to know you and your situation. It’s like a friendly chat about how we can help, without any pressure or awkwardness.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Don’t get legal jargon? We got you!</h3>
-                <p>No stress! We’ll explain all the legal mumbo jumbo in plain English. Consider us your personal legal translator—making sure you understand everything without needing a law degree!</p>
-            </div>
-            <div class="faq-item">
-                <h3>Not sure if you need a lawyer?</h3>
-                <p>Just ask us! If you’re facing something complex or confusing, it’s usually a good idea to have us on your team. Think of us as your cheat sheet for all things legal.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Worried about the cost of a lawyer?</h3>
-                <p>We understand—legal fees can add up. We offer various options and can set up a payment plan that works for you. Plus, we’ll explore alternative ways to ensure you get the help you need without breaking the bank.</p>
-            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">What We Do</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="hiring.html">Join Us</a></li>
+                   <li><a href="FAQ's.html">FAQ'S</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
-    <script>
-        document.getElementById('menuToggle').addEventListener('click', function() {
-            document.getElementById('navbar').classList.toggle('active');
-        });
-    </script>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="container">
+                <h1>Get in Touch!</h1>
+                <p>Hey there! Got questions, need some advice, or just want to chat? You’re in the right place! Here’s how you can get in touch with us:</p>
+
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 906 Applerock, Leander TX, 78641</p>
+                    <p><strong>Phone:</strong> (432) 978-0903</p>
+                    <p><strong>Email:</strong> <a href="mailto:contact@tafreshilegal.com">contact@tafreshilegal.com</a></p>
+                </div>
+
+                <form action="contact_form_handler.php" method="post" class="contact-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+
+                    <button type="submit">Send It!</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Tafreshi Legal Solutions. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
-
-
